@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Colin Balitewicz.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -40,8 +40,8 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    # run_test_init()
-    # run_test_append_string()
+    #run_test_init()
+    run_test_append_string()
     # run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
@@ -64,6 +64,11 @@ class Box(object):
     """
 
     def __init__(self, contents, volume):
+        self.contents=contents
+        self.volume=volume
+        if len(self.contents)>self.volume:
+            self.contents=''
+
         """
         What comes in:
           -- self
@@ -105,6 +110,20 @@ class Box(object):
         # ---------------------------------------------------------------------
 
     def append_string(self, additional_contents):
+        self.contents=self.contents+additional_contents
+        if len(self.contents)>self.volume:
+            w=''
+            for k in range(self.volume):
+                w=w+self.contents[k]
+
+            s=''
+            for k in range(self.volume,len(self.contents)):
+                s=s+self.contents[k]
+
+            self.contents = w
+            return s
+        else:
+            return''
         """
         What comes in:
           -- self
