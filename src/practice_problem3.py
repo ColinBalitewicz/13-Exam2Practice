@@ -352,7 +352,7 @@ def practice_problem3b(sequence):
       :type: sequence: list    or tuple or string
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:  You are NOT allowed to use the
@@ -453,6 +453,11 @@ def run_test_practice_problem3c():
 
 
 def practice_problem3c(sequence):
+    x=[]
+    for k in range(len(sequence)):
+        if sequence[k]==0:
+           x=x+[k]
+    return x
     """
     What comes in: A non-empty sequence of integers.
     What goes out: Returns a list of integers,
@@ -480,7 +485,7 @@ def practice_problem3c(sequence):
       :type: sequence: list    or tuple or string
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -576,6 +581,10 @@ def run_test_practice_problem3d():
 
 
 def practice_problem3d(sequence):
+    """for k in range(len(sequence)):
+        if sequence[k]==0:
+            return k
+    return -1"""
     """
     What comes in: A sequence of integers.
     What goes out: Returns the first (leftmost) place (index)
@@ -603,7 +612,7 @@ def practice_problem3d(sequence):
       :type: sequence: list    or tuple or string
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -626,8 +635,11 @@ def practice_problem3d(sequence):
     #
     #          This solution should *** HAVE NO LOOP (no FOR). ***
     ###########################################################################
-
-
+    s=practice_problem3c(sequence)
+    if len(s)>0:
+        return s[0]
+    else:
+        return -1
 def run_test_practice_problem3e():
     """ Tests the    practice_problem3e    function. """
     print()
@@ -739,6 +751,11 @@ def run_test_practice_problem3e():
 
 
 def practice_problem3e(sequence):
+    sum=0
+    for k in range(len(sequence)):
+        if k%2==0:
+            sum=sum+sequence[k]
+    return sum
     """
     What comes in:
       A sequence of numbers.
