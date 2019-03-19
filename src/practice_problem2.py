@@ -62,7 +62,10 @@ def run_test_practice_problem2a():
     print(practice_problem2a(sequence_2,2))
     sequence_3=[2,3,4]
     print(practice_problem2a(sequence_3,2))
-
+    sequence_4=[5,6,7]
+    print(practice_problem2a(sequence_4,9))
+    sequence_5=[9,10,11]
+    print(practice_problem2a(sequence_5,3))
 def practice_problem2a(sequence, delta):
     for k in range(len(sequence)):
         sequence[k]=sequence[k]+delta
@@ -85,7 +88,7 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     WRITE THE TESTS FIRST (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -199,7 +202,7 @@ def practice_problem2b(sequence):
       :type sequence: [str]
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
