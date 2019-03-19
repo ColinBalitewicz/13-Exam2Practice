@@ -3,8 +3,8 @@ PRACTICE Exam 2, practice_problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Colin Balitewicz.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -154,6 +154,11 @@ def run_test_practice_problem3a():
 
 
 def practice_problem3a(circles):
+    product=1
+    if len(circles)>0:
+        for k in range(len(circles)):
+            product=product*circles[k].center.x
+    return product
     """
     What comes in:  A sequence of rg.Circles.
     What goes out:  Returns the product of the x-coordinates
@@ -173,7 +178,7 @@ def practice_problem3a(circles):
       :type sequence: [rg.Circle]
     """
     ###########################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -301,6 +306,11 @@ def run_test_practice_problem3b():
 
 
 def practice_problem3b(sequence):
+    for k in range(len(sequence)-1):
+        if sequence[len(sequence)-1]==sequence[k]:
+            return True
+
+    return False
     """
     What comes in: A non-empty sequence.
     What goes out: Returns True if the last item of the sequence
